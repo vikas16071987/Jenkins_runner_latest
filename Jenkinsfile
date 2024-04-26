@@ -1,9 +1,6 @@
 pipeline{
 
-	agent {
-        lable 'echo'
-    }
-
+	agent any
 	stages{
 
 		stage('Run Test'){
