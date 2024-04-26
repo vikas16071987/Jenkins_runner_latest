@@ -1,7 +1,7 @@
 version: "3"
 services:
   vendor-portal:
-    image: vikas1607/selenium1234
+    image: vinsdocker/selenium
     environment:
     - BROWSER
     - HUB_HOST=hub    
@@ -10,11 +10,15 @@ services:
     volumes:
     - ./output/vendor-portal:/home/selenium-docker/test-output
   flight-reservation:
-    image: vikas1607/selenium1234
+    image: vinsdocker/selenium
     environment:
     - BROWSER
     - HUB_HOST=hub    
     - THREAD_COUNT=4    
     - TEST_SUITE=flight-reservation.xml
     volumes:
+<<<<<<< HEAD
     - ./output/flight-reservation:/home/selenium-docker/test-output     
+=======
+    - ./output/flight-reservation:/home/selenium-docker/test-output   
+>>>>>>> a4e6dbc (test-suite.yaml)
