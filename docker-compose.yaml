@@ -2,11 +2,15 @@ version: "3"
 services:
   hub:
     image: seleniarm/hub:4.19
+    ports:
+    - 4444:4444
   chrome:
     image: seleniarm/node-chromium:4.19
     shm_size: '2g'
     depends_on:
     - hub
+    deploy:
+      replicas: 3
     environment:
     - SE_EVENT_BUS_HOST=hub
     - SE_EVENT_BUS_PUBLISH_PORT=4442
@@ -18,6 +22,8 @@ services:
     shm_size: '2g'
     depends_on:
     - hub
+    deploy:
+      replicas: 3
     environment:
     - SE_EVENT_BUS_HOST=hub
     - SE_EVENT_BUS_PUBLISH_PORT=4442
