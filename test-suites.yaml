@@ -1,7 +1,7 @@
 version: "3"
 services:
   vendor-portal:
-    image: vikas1607/selenium1234
+    image: vikas1607/selenium1234:latest
     environment:
     - BROWSER
     - HUB_HOST=hub    
@@ -10,7 +10,7 @@ services:
     volumes:
     - ./output/vendor-portal:/home/selenium-docker/test-output
   flight-reservation:
-    image: vikas1607/selenium1234
+    image: vikas1607/selenium1234:latest
     environment:
     - BROWSER
     - HUB_HOST=hub    
